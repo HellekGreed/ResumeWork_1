@@ -14,3 +14,26 @@
         return array;
 }
 
+string[] GerArrayShortString(string[] array)
+{
+        int count = 0;
+        for(int i = 0; i < array.Length; i++)
+        {
+                if(array[i].Length < 4)
+                {
+                        count++;
+                }
+        }
+        string[] resultArray = new string(count);
+        count = 0;
+        for(int i = 0; i < array.Length; i++)
+        {
+                if(array[i].Length < 4)
+                {
+                        resultArray[count] = array[i];
+                        count++;
+                }
+        }
+        return resultArray;
+}
+
