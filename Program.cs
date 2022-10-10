@@ -37,3 +37,20 @@ string[] GerArrayShortString(string[] array)
         return resultArray;
 }
 
+void PrintArray(string[] array)
+{
+        if(array.Length == 0)
+        {
+                Console.WriteLine("Массив пуст.");
+        }
+        else
+        {
+                Console.WriteLine("Список строк меньше 3-х символов:");
+                foreach(string s in array)
+                {   
+                        Console.Write($"{s} ");
+                }
+        }
+        
+}
+
