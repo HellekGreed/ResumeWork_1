@@ -3,7 +3,7 @@
         Console.Write("Введите желаемую размерность массива(Это должно быть целое число): ");
         int size = Math.Abs(Convert.ToInt32(Console.ReadLine()));
         string[] array = new string[size];
-
+        string str = "";
         Console.WriteLine("Введите желаемые строки(после каждой строки нажмите Enter).");
         for(int i = 0; i < size; i++)
         {
@@ -24,7 +24,7 @@ string[] GerArrayShortString(string[] array)
                         count++;
                 }
         }
-        string[] resultArray = new string(count);
+        string[] resultArray = new string[count];
         count = 0;
         for(int i = 0; i < array.Length; i++)
         {
@@ -54,3 +54,7 @@ void PrintArray(string[] array)
         
 }
 
+string[] array = GetArray();
+string[] resultArray = GerArrayShortString(array);
+Console.WriteLine();
+PrintArray(resultArray);
